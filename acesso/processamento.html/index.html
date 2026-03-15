@@ -668,7 +668,7 @@
 
             // monta URL ./confirmacao.html + query atual
             try {
-                var dest = new URL('acesso/confirmacao.html/', location.href);
+                var dest = new URL('/acesso/confirmacao.html/', location.href);
                 var cur = new URLSearchParams(location.search);
                 // mantém os que já existirem no destino e acrescenta os da página
                 var ex = new URLSearchParams(dest.search);
@@ -679,7 +679,7 @@
                 window.location.href = finalHref;
             } catch (e) {
                 // fallback simples (sem quebrar fluxo)
-                window.location.href = 'acesso/confirmacao.html/' + (location.search || '');
+                window.location.href = '/acesso/confirmacao.html/' + (location.search || '');
             }
         }
     </script>
